@@ -3,7 +3,6 @@
 - https://realpython.com/python-send-email/#sending-a-plain-text-email
 - https://www.tutorialspoint.com/send-mail-from-your-gmail-account-using-python
 """
-from __future__ import print_function
 import smtplib
 import ssl
 import os
@@ -82,8 +81,7 @@ def get_email_content(event):
     return msg
 
 def handler(event, context):
-    print(f"event: {json.dumps(event, indent=2)}")
-    print(f"context: {json.dumps(context, indent=2)}")
+    # print(f"event: {json.dumps(event, indent=2)}")
 
     receiver_emails = [
         os.environ["RECEIVER_EMAIL"],
